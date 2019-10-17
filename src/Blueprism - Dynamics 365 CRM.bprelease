@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bpr:release xmlns:bpr="http://www.blueprism.co.uk/product/release">
+    <bpr:name>Blueprism - Dynamics 365 CRM v3</bpr:name>
+    <bpr:release-notes />
+    <bpr:created>2019-10-11 18:30:57Z</bpr:created>
+    <bpr:package-id>4</bpr:package-id>
+    <bpr:package-name>Blueprism - Dynamics 365 CRM</bpr:package-name>
+    <bpr:user-created-by>admin</bpr:user-created-by>
+    <bpr:contents count="1">
+        <webapiservice id="0d98cff1-f8b9-462d-b66f-96c0190f52be" name="Blueprism: Dynamics 365 CRM" enabled="true" xmlns="http://www.blueprism.co.uk/product/webapiservice">
+            <configuration baseurl="https://blueprism.api.crm11.dynamics.com/api/data/v9.1" xmlns="">
+                <actions>
+                    <action id="28" name="Update" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[This action executes a PATCH request to update a single Microsoft Dynamics 365 Entity.]]></description>
+                        <request httpmethod="PATCH" urlpath="/[EntityType]s([EntityId])">
+                            <headers />
+                            <bodycontent type="4">
+                                <code><![CDATA[Request_Content = BuildJObject(Key_Value_Pairs);]]></code>
+                            </bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="EntityId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The ID of the Entity to update]]></description>
+                            </actionparameter>
+                            <actionparameter name="Key Value Pairs" expose="true" datatype="1">
+                                <initialvalue><![CDATA[<collection />]]></initialvalue>
+                                <description><![CDATA[A collection of Entity property key value pairs of property names and corresponding values. The collection MUST contain the following two fields and at least one row: “PropertyName” and “PropertyValue”; both of type Text.]]></description>
+                            </actionparameter>
+                            <actionparameter name="EntityType" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The type of Entity to update]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="29" name="Create" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[This action executes a POST request to create a Microsoft Dynamics 365 Entity.]]></description>
+                        <request httpmethod="POST" urlpath="/[EntityType]s?$select=[EntityType]id">
+                            <headers />
+                            <bodycontent type="4">
+                                <code><![CDATA[Request_Content = BuildJObject(Key_Value_Pairs);]]></code>
+                            </bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="EntityType" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The type of Entity to create]]></description>
+                            </actionparameter>
+                            <actionparameter name="Key Value Pairs" expose="true" datatype="1">
+                                <initialvalue><![CDATA[<collection />]]></initialvalue>
+                                <description><![CDATA[A collection of Entity property key value pairs of property names and corresponding values. The collection MUST contain the following two fields and at least one row: “PropertyName” and “PropertyValue”; both of type Text.]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="30" name="Retrieve" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[This action executes a GET request to retrieve a single Microsoft Dynamics 365 Entity.]]></description>
+                        <request httpmethod="GET" urlpath="/[EntityType]s([EntityId])">
+                            <headers />
+                            <bodycontent type="0"></bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="EntityId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The ID of the Entity to retrieve]]></description>
+                            </actionparameter>
+                            <actionparameter name="EntityType" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The type of Entity to retrieve]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="31" name="Delete" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[This action executes a DELETE request to delete a Microsoft Dynamics 365 Entity.]]></description>
+                        <request httpmethod="DELETE" urlpath="/[EntityType]s([EntityId])">
+                            <headers />
+                            <bodycontent type="0"></bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="EntityId" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[]]></description>
+                            </actionparameter>
+                            <actionparameter name="EntityType" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The type of Entity to delete]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                    <action id="32" name="Retrieve List" enabled="true" enableRequestOutputParameter="false" disableSendingOfRequest="false">
+                        <description><![CDATA[This action executes a GET request to retrieve a list of all Microsoft Dynamics 365 Entities of a specified type.]]></description>
+                        <request httpmethod="GET" urlpath="/[EntityType]s">
+                            <headers />
+                            <bodycontent type="0"></bodycontent>
+                        </request>
+                        <parameters>
+                            <actionparameter name="EntityType" expose="true" datatype="64">
+                                <initialvalue><![CDATA[]]></initialvalue>
+                                <description><![CDATA[The type of Entity to retrieve]]></description>
+                            </actionparameter>
+                        </parameters>
+                        <outputparameters>
+                            <parameters />
+                            <code><![CDATA[]]></code>
+                        </outputparameters>
+                    </action>
+                </actions>
+                <commonparameters>
+                    <actionparameter name="Token" expose="true" datatype="64">
+                        <initialvalue><![CDATA[]]></initialvalue>
+                        <description><![CDATA[The access token for authentication.]]></description>
+                    </actionparameter>
+                </commonparameters>
+                <commonheaders>
+                    <httpheader name="Content-Type" value="application/json; charset=utf-8" />
+                    <httpheader name="OData-MaxVersion" value="4.0" />
+                    <httpheader name="OData-Version" value="4.0" />
+                    <httpheader name="Accept" value="application/json" />
+                    <httpheader name="Authorization" value="Bearer [Token]" />
+                </commonheaders>
+                <commonauthentications>
+                    <authentication type="0" />
+                </commonauthentications>
+                <commoncode>
+                    <codeproperties code="public string BuildJObject(DataTable Key_Value_Pairs)&#xD;&#xA;{&#xD;&#xA;&#x9;// init JObject list for object properties&#xD;&#xA;&#x9;List&lt;JObject&gt; props = new List&lt;JObject&gt;();&#xD;&#xA;&#xD;&#xA;&#x9;// loop through all key value pairs, creating an object&#xD;&#xA;&#x9;// property for each&#xD;&#xA;&#x9;foreach (DataRow row in Key_Value_Pairs.Rows)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;props.Add(new JObject(&#xD;&#xA;&#x9;&#x9;&#x9;new JProperty(row[&quot;PropertyName&quot;].ToString(), row[&quot;PropertyValue&quot;].ToString())));&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;// return the constructed JObject&#xD;&#xA;&#x9;return JsonConvert.SerializeObject(new JObject(props.SelectMany(p =&gt; p.Properties())));&#xD;&#xA;}" language="csharp">
+                        <namespaces>
+                            <namespace>System</namespace>
+                            <namespace>System.Drawing</namespace>
+                            <namespace>System.Data</namespace>
+                            <namespace>System.Collections.Generic</namespace>
+                            <namespace>Newtonsoft.Json</namespace>
+                            <namespace>Newtonsoft.Json.Linq</namespace>
+                            <namespace>System.Linq</namespace>
+                        </namespaces>
+                        <references>
+                            <reference>System.dll</reference>
+                            <reference>System.Data.dll</reference>
+                            <reference>System.Xml.dll</reference>
+                            <reference>System.Drawing.dll</reference>
+                            <reference>Newtonsoft.Json.dll</reference>
+                            <reference>System.Core.dll</reference>
+                        </references>
+                    </codeproperties>
+                </commoncode>
+                <configurationsettings>
+                    <configurationsettings requesttimeout="10" authserverrequesttimeout="10" />
+                </configurationsettings>
+            </configuration>
+        </webapiservice>
+    </bpr:contents>
+</bpr:release>
